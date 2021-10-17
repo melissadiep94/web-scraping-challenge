@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="p-3 mb-2 bg-secondary mask gradient-custom text-white text-center ">
+      <h1><strong>Mission to Mars</strong></h1>
+      <p><a class="btn btn-primary btn-lg " href="/scrape" role="button"><strong>Scrape New Data</strong></a></p>
+    </div>
+
+    <!-- Mars Data -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Latest Mars News</h2>
+        <h5 class="heading"><strong>{{mars.news_title}}</strong></h5>
+        <p>{{mars.news_par}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h4><strong>Featured Mars Image</strong></h4>
+        <p class="featured_image ">
+          <img src="{{mars.featured_image}}" class="rounded-1 border border-3" alt="Featured Mars Image">
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4><strong>Mars Facts</strong></h4>
+        <br>
+        <div class="table ">
+            <table border="2" class="dataframe table-striped table-bordered">
+                <thead class="thead-dark;">
+                  <tr style="text-align: center;">
+                    <th>Description</th>
+                    <th>Mars</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Equatorial Diameter</td>
+                    <td>6,792 km</td>
+                  </tr>
+                  <tr>
+                    <td>Polar Diameter</td>
+                    <td>6,752 km</td>
+                  </tr>
+                  <tr>
+                    <td>Mass</td>
+                    <td>6.39 × 10^23 kg (0.11 Earths)</td>
+                  </tr>
+                  <tr>
+                    <td>Moons</td>
+                    <td>2 ( Phobos &amp; Deimos )</td>
+                  </tr>
+                  <tr>
+                    <td>Orbit Distance</td>
+                    <td>227,943,824 km (1.38 AU)</td>
+                  </tr>
+                  <tr>
+                    <td>Orbit Period</td>
+                    <td>687 days (1.9 years)</td>
+                  </tr>
+                  <tr>
+                    <td>Surface Temperature</td>
+                    <td>-87 to -5 °C</td>
+                  </tr>
+                  <tr>
+                    <td>First Record</td>
+                    <td>2nd millennium BC</td>
+                  </tr>
+                  <tr>
+                    <td>Recorded By</td>
+                    <td>Egyptian astronomers</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <h4 class="text-center"><strong>Mars Hemispheres</strong></h4>
+      <br>
+      <br>
+      <div class="row row-cols-2 row-cols-md-4 ">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header h-25 bg-secondary mask gradient-custom text-white"><strong>{{mars.hemispheres_info[0].title}}</strong></div>
+            <div class="card-body">
+              <img src="{{mars.hemispheres_info[0].img_url}}" class="card-img-bottom rounded-1 border border-3"
+                alt="Cereberus">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header h-25 bg-secondary mask gradient-custom text-white"><strong>{{mars.hemispheres_info[1].title}}</strong></div>
+            <div class="card-body">
+              <img src="{{mars.hemispheres_info[1].img_url}}" class="card-img-bottom rounded-1 border border-3"
+                alt="Schiaparelli">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header h-25 bg-secondary mask gradient-custom text-white"><strong>{{mars.hemispheres_info[2].title}}</strong></div>
+            <div class="card-body">
+              <img src="{{mars.hemispheres_info[2].img_url}}" class="card-img-bottom rounded-1 border border-3"
+                alt="Syrtis">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header h-25 bg-secondary mask gradient-custom text-white"><strong>{{mars.hemispheres_info[3].title}}</strong></div>
+            <div class="card-body">
+              <img src="{{mars.hemispheres_info[3].img_url}}" class="card-img-bottom rounded-1 border border-3"
+                alt="Valles Marineris">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>  
+     
+</body>
+
+</html>
